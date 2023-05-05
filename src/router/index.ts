@@ -2,14 +2,17 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue'
 import { weatherRoutes } from '@/weather/weather.routes';
+import authRouter from '@/router/auth';
+import isAuthGuard from './auth/authGuard';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    redirect: '/tabs/tab1'
+    path: '/auth',
+    ...authRouter
   },
   {
-    path: '/tabs/',
+    path: '/',
+    beforeEnter: [ isAuthGuard ],
     component: Tabs,
     children: [
       {
@@ -38,4 +41,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
