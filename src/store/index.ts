@@ -8,4 +8,5 @@ const store = createStore({
     ui
   }
 });
+
 export default store;
