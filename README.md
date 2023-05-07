@@ -1,5 +1,14 @@
-# vue3-ionic-weather-app
-weather app created with vue 3 and ionic
+# SkyScanner App for Weather
+
+Tech Stack:
+  - Vue 3
+  - Java Spring
+  - Docker
+  - Ionic
+  - OpenWeatherAPI
+  - PostgreSQL
+  - Visual Studio Code
+  - Git
 
 To run this app, as long as you have the ionic cli installed, simply run:
 `npm install`
